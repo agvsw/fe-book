@@ -74,7 +74,7 @@ export default function Home() {
                  <SearchForm finish={onSearch}/>
               </Row>
               <br/>
-              <ListBook className="list-book" data={data} showFavorite={true}/>
+              <ListBook className="list-book" data={data} showFavorite={true} getFavorite={fetchDataFavorite}/>
             </TabPane>
             <TabPane tab="My Favorit" key="2">
               <ListBook className="list-book" data={dataFavorite} showFavorite={false} />

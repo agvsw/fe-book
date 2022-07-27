@@ -8,7 +8,7 @@ const { Meta } = Card;
 
 
 
-const Box = ({ item, showFavorite }) => {
+const Box = ({ item, showFavorite, getFavorite }) => {
 	const addFavorite = () => {
 		fetch('https://book-be.herokuapp.com/favorite', {
       method: "POST",
@@ -19,6 +19,7 @@ const Box = ({ item, showFavorite }) => {
       body: JSON.stringify(item),
     })
     .then(response => {
+			getFavorite();
 			message.success('Success add to favorite');
     })
     .catch(error => {
@@ -47,7 +48,7 @@ const Box = ({ item, showFavorite }) => {
 					</Row>
 				
 
-				
+					git commit -am "make it better"
 					<Row>
 						<Col lg={10} style={{ color:'#fff', lineHeight:'30px' }}>
               {item.author.length > 11 ? item.author.slice(0, 10) + '...' : item.author}

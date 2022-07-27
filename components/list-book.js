@@ -2,7 +2,7 @@ import { Button, DatePicker, Layout, Menu, Tabs, Row, Col } from 'antd';
 import Box from './Box'
 import { useState, useEffect } from 'react';
 
-const ListBook = ({data, showFavorite}) => {
+const ListBook = ({data, showFavorite, getFavorite}) => {
 
   return (
     <Row gutter={[16,16]}>
@@ -10,7 +10,7 @@ const ListBook = ({data, showFavorite}) => {
           data ? (
             data.map((row, i) => {
   					  return <Col lg={6} key={i}>
-	  					  <Box item={row} showFavorite={showFavorite} />
+	  					  <Box item={row} showFavorite={showFavorite} getFavorite={getFavorite}/>
               </Col>
   				  })
           ):(
