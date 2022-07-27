@@ -20,7 +20,7 @@ const Box = ({ item, showFavorite, getFavorite }) => {
     })
     .then(response => {
 			getFavorite();
-			
+
 			message.success('Success add to favorite');
     })
     .catch(error => {
@@ -34,7 +34,6 @@ const Box = ({ item, showFavorite, getFavorite }) => {
 					className="project-card"
 			    	cover={
 			      		<Img src={`${item.image}`} style={{ padding: '0px', margin: '-1px 0px', height: '100%' }}/>
-			      		// <Img src='http://books.google.com/books/content?id=rSV1uwCy-vQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api' style={{ padding: '0px', margin: '-1px 0px' }}/>
 			    	}>
 					<Row className="project-box">
 						<div className="project-summary">
