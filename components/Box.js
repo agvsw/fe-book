@@ -20,6 +20,7 @@ const Box = ({ item, showFavorite, getFavorite }) => {
     })
     .then(response => {
 			getFavorite();
+			
 			message.success('Success add to favorite');
     })
     .catch(error => {
