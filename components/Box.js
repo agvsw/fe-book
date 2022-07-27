@@ -46,6 +46,8 @@ const Box = ({ item, showFavorite }) => {
 						</Col>
 					</Row>
 				
+
+				
 					<Row>
 						<Col lg={10} style={{ color:'#fff', lineHeight:'30px' }}>
               {item.author.length > 11 ? item.author.slice(0, 10) + '...' : item.author}
