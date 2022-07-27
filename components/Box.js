@@ -1,7 +1,5 @@
 
 import { Row, Col, Card, Button, Rate, message } from 'antd'
-import { EnvironmentOutlined } from '@ant-design/icons';
-import Link from 'next/link'
 import Img from '../utils/Img'
 
 const { Meta } = Card;
@@ -17,10 +15,8 @@ const Box = ({ item, showFavorite, getFavorite }) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(item),
-    })
-    .then(response => {
-			getFavorite();
-
+    }).then(response => {
+			getFavorite()
 			message.success('Success add to favorite');
     })
     .catch(error => {
@@ -47,8 +43,6 @@ const Box = ({ item, showFavorite, getFavorite }) => {
 						</Col>
 					</Row>
 				
-
-					git commit -am "make it better"
 					<Row>
 						<Col lg={10} style={{ color:'#fff', lineHeight:'30px' }}>
               {item.author.length > 11 ? item.author.slice(0, 10) + '...' : item.author}
